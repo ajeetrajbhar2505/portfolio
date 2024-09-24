@@ -336,10 +336,6 @@ header {
         font-size: 50px;
         color: $fern;
     }
-    .fa-database{
-        color: $white;
-        
-    }
 }
 
 .opportunity {
@@ -358,6 +354,14 @@ header {
     }
     &:hover {
         transform: translateY(-2rem);
+        background-color: $fern;
+        .opportunity__title,
+        .opportunity__description {
+            color: $white;
+        }
+        .fa,.fas{
+            color: $white;
+        }
     }
 }
 
@@ -411,12 +415,12 @@ header {
 
 .invest__item {
     padding: 2.5rem;
-    &:nth-child(1) {
-        background: url('https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/investments/invest-1.png') no-repeat center/cover;
-    }
-    &:nth-child(2) {
-        background: url('https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/investments/invest-2.png') no-repeat center/cover;
-    }
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0 0 0.75rem rgba(27, 31, 35, 0.15));
+    padding: 5rem 2.5rem 2.5rem;
+    transition: all 0.3s ease-out;
+
 }
 
 .invest__item__subtitle {
@@ -431,7 +435,7 @@ header {
         left: 0;
         width: 5.6rem;
         height: 4px;
-        background-color: $white;
+        background-color: $fern;
     }
 }
 
@@ -440,14 +444,14 @@ header {
 }
 
 .invest__item__title {
-    color: $white;
+    color: $fern;
     font-size: 3.1rem;
     max-width: 30rem;
 }
 
 .invest__item_description {
     font-size: 1.6rem;
-    color: $white;
+    color: $fern;
     max-width: 30rem;
 }
 
