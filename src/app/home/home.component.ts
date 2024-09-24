@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -11,7 +11,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  scrollValue:number = 0
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.scrollValue = window.scrollY; 
+  }
   testimonials = [
     {
       img: 'https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/testimonials/1.png',
