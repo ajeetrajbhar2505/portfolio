@@ -214,59 +214,32 @@
             </div>
             <div class="testimonials__body">
                 <div class="testimonials__list">
-                    <div class="testimonial">
-                        <div class="testimonial__profile">
-                            <div class="testimonial__img">
-                                <img src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/testimonials/1.png" alt="Testimonial">
-                            </div>
-                            <div class="testimonial__info">
-                                <h4 class="testimonial__name">Alice Johnson</h4>
-                                <h4 class="testimonial__title">Frontend Developer</h4>
-                            </div>
+                    <div class="testimonial" *ngFor="let testimonial of testimonials;let i = index" (click)="setSelectedIndex(i)">
+                      <div class="testimonial__profile">
+                        <div class="testimonial__img">
+                          <img [src]="testimonial.img" alt="Testimonial">
                         </div>
-                        <p class="testimonial__description">
-                            “Working with them was an absolute pleasure! Their expertise in Angular is top-notch.”
-                        </p>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonial__profile">
-                            <div class="testimonial__img">
-                                <img src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/testimonials/2.png" alt="Testimonial">
-                            </div>
-                            <div class="testimonial__info">
-                                <h4 class="testimonial__name">Bob Smith</h4>
-                                <h4 class="testimonial__title">Backend Engineer</h4>
-                            </div>
+                        <div class="testimonial__info">
+                          <h4 class="testimonial__name">{{ testimonial.name }}</h4>
+                          <h4 class="testimonial__title">{{ testimonial.title }}</h4>
                         </div>
-                        <p class="testimonial__description">
-                            “Their attention to detail and coding standards is impressive. Highly recommend!”
-                        </p>
+                      </div>
+                      <p class="testimonial__description">
+                        {{ testimonial.description }}
+                      </p>
                     </div>
-                    <div class="testimonial">
-                        <div class="testimonial__profile">
-                            <div class="testimonial__img">
-                                <img src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/testimonials/3.png" alt="Testimonial">
-                            </div>
-                            <div class="testimonial__info">
-                                <h4 class="testimonial__name">John Doe</h4>
-                                <h4 class="testimonial__title">Software Engineer</h4>
-                            </div>
-                        </div>
-                        <p class="testimonial__description">
-                            “I learned so much collaborating on projects. Their insights are invaluable.”
-                        </p>
-                    </div>
-                    <!-- Repeat for more testimonials as needed -->
-                </div>
+                  </div>
+                  
             </div>
             <div class="testimonials__footer w-105">
                 <div class="testimonials__directions">
-                    <button class="btn__testimonials btn__testimonials__prev disable">
+                    <button class="btn__testimonials btn__testimonials__prev disable" (click)="adjustFlexShrink('increase')">
                         <i class="fa fa-chevron-left"></i>
                     </button>
-                    <button class="btn__testimonials btn__testimonials__next">
+                    <button class="btn__testimonials btn__testimonials__next" (click)="adjustFlexShrink('decrease')">
                         <i class="fa fa-chevron-right"></i>
                     </button>
+                    
                 </div>
             </div>
         </div>
@@ -349,7 +322,6 @@
                     © Copyright 2024. Zou Capital Pvt Ltd (Mumbai).
                 </p>
             </div>
-            <img src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/mountain.png" alt="Mountain" class="footer_img">
         </div>
     </footer>
 </div>
