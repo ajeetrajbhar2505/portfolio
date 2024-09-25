@@ -24,7 +24,7 @@
                         <a href="#" class="menu__link">Contact</a>
                     </li>
                 </ul>
-                <div class="header__signup">
+                <div class="header__signup" *ngIf="false">
                     <a href="#" class="btn btn__signup">
                         <i class="fas fa-user-plus"></i> Sign Up
                     </a>
@@ -49,7 +49,7 @@
                     I specialize in building scalable, efficient web applications with the latest technologies like
                     Angular, Node.js, and more.
                 </p>
-                <a href="#" class="btn btn__hero">Hire Now</a>
+                <a href="#" class="btn btn__hero">Hire Us</a>
             </div>
             <div class="hero__img">
                 <div id="cartoon" role="img" aria-labelledby="description">
@@ -111,6 +111,8 @@
             </div>
         </div>
     </section>
+
+    
 
     <section class="opportunities">
         <div class="opportunities__content w-105">
@@ -222,6 +224,66 @@
         </div>
     </section>
 
+        <section class="opportunities">
+        <div class="opportunities__content w-105">
+            <div class="opportunities__head">
+                <h2 class="opportunities__title">Our Software Development Process</h2>
+                <p class="opportunities__description">Our <b>software development process</b> ensures thorough planning,
+                    agile development, and rigorous testing to deliver high-quality solutions. We prioritize
+                    collaboration, transparency, and continuous improvement to meet and exceed client expectations.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="customcontainer left">
+                    <img src="/public_define.svg" alt="Define" class="icon" style="width: 60px;">
+                    <div class="content">
+                        <h2>Define</h2>
+                        <p>Identify the objectives and scope of the software and create a detailed roadmap.</p>
+                    </div>
+                </div>
+
+                <div class="customcontainer right">
+                    <img src="/public_design.svg" alt="Design" class="icon" style="width: 60px;">
+                    <div class="content">
+                        <h2>Design</h2>
+                        <p>Develop user-centric designs and architecture for seamless use.</p>
+                    </div>
+                </div>
+
+                <div class="customcontainer left">
+                    <img src="/public_develop.svg" alt="Develop" class="icon" style="width: 60px;">
+                    <div class="content">
+                        <h2>Develop</h2>
+                        <p>Code the application using best practices and the latest technologies.</p>
+                    </div>
+                </div>
+
+                <div class="customcontainer right">
+                    <img src="/public_test.svg" alt="Test" class="icon" style="width: 60px;">
+                    <div class="content">
+                        <h2>Test</h2>
+                        <p>Conduct comprehensive testing to identify and fix any issues.</p>
+                    </div>
+                </div>
+
+                <div class="customcontainer left">
+                    <img src="/public_security.svg" alt="Deploy" class="icon" style="width: 60px;">
+                    <div class="content">
+                        <h2>Deploy</h2>
+                        <p>Implement the solution in the target environment with precision.</p>
+                    </div>
+                </div>
+
+                <div class="customcontainer right">
+                    <img src="/public_documentation.svg" alt="Maintain" class="icon" style="width: 60px;">
+                    <div class="content">
+                        <h2>Maintain</h2>
+                        <p>Offer continuous support, updates, and enhancements post-launch.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="opportunities">
         <div class="opportunities__content w-105">
@@ -288,69 +350,23 @@
     </section>
 
 
-    <section class="opportunities">
-        <div class="opportunities__content w-105">
-            <div class="opportunities__head">
-                <h2 class="opportunities__title">Our Software Development Process</h2>
-                <p class="opportunities__description">Our <b>software development process</b> ensures thorough planning,
-                    agile development, and rigorous testing to deliver high-quality solutions. We prioritize
-                    collaboration, transparency, and continuous improvement to meet and exceed client expectations.</p>
-            </div>
-            <div class="opportunities__body">
-                <div class="opportunity">
-                    <img src="/public_define.svg" alt="Define" style="width: 60px;">
-                    <h4 class="opportunity__title">Define</h4>
-                    <p class="opportunity__description">Identify the objectives and scope of the software and create a
-                        detailed roadmap.</p>
-                </div>
 
-                <div class="opportunity">
-                    <img src="/public_design.svg" alt="Design" style="width: 60px;">
-                    <h4 class="opportunity__title">Design</h4>
-                    <p class="opportunity__description">Develop user-centric designs and architecture for seamless use.
-                    </p>
-                </div>
 
-                <div class="opportunity">
-                    <img src="/public_develop.svg" alt="Develop" style="width: 60px;">
-                    <h4 class="opportunity__title">Develop</h4>
-                    <p class="opportunity__description">Code the application using best practices and the latest
-                        technologies.</p>
-                </div>
-
-                <div class="opportunity">
-                    <img src="/public_test.svg" alt="Test" style="width: 60px;">
-                    <h4 class="opportunity__title">Test</h4>
-                    <p class="opportunity__description">Conduct comprehensive testing to identify and fix any issues.
-                    </p>
-                </div>
-                <div class="opportunity">
-                    <img src="/public_security.svg" alt="Deploy" style="width: 60px;">
-                    <h4 class="opportunity__title">Deploy</h4>
-                    <p class="opportunity__description">Implement the solution in the target environment with precision.
-                    </p>
-                </div>
-                <div class="opportunity">
-                    <img src="/public_documentation.svg" alt="Maintain" style="width: 60px;">
-                    <h4 class="opportunity__title">Maintain</h4>
-                    <p class="opportunity__description">Offer continuous support, updates, and enhancements post-launch.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <section class="farm-invest w-105">
         <h2 class="farm-invest__title">Let's Discuss Your Project</h2>
         <p>Our solutions experts schedule a secure meeting within 24 hours.</p>
         <p>They recommend tailored skills and hiring models.</p>
         <p>You make informed decisions based on our expert guidance.</p>
-        <a href="#" class="btn btn__farm--invest">Schedule A Discovery Call</a>
+        <a href="#" class="btn btn__farm--invest" *ngIf="false">Schedule A Discovery Call</a>
     </section>
 
 
-    
+
+
+
+
+
     <section class="testimonials">
         <div class="testimonials__content">
             <div class="testimonials__head w-105">
