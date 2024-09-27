@@ -393,7 +393,9 @@ header {
 }
 
 .invest__head {
+    text-align: center;
     max-width: 70rem;
+    margin: 0 auto 10rem;
 }
 
 .invest__title {
@@ -744,7 +746,7 @@ header {
     border: 1px solid $fern;
     color: $white;
     display: inline-block;
-    min-width: 25rem;
+    min-width: 31rem;
     margin-top: 4rem;
     @include btnShadow;
     @include btnHoverAnimate($fern,

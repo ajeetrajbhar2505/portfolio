@@ -205,3 +205,19 @@
     width: 0;
     
 }
+
+
+.fa-arrow-right:before {
+  display: inline-block; /* Ensure the icon behaves like a block element */
+  transform: translateX(0); /* Start from left */
+  animation: slideIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite; /* Call the animation */
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(0); /* Start from left */
+  }
+  100% {
+      transform: translateX(28px); /* End at its original position */
+  }
+}
