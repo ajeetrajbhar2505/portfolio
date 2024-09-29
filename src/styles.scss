@@ -17,6 +17,7 @@ $lynch: #607D8B;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 html {
@@ -343,7 +344,8 @@ header {
     width: 30%;
     background-color: $white;
     border-radius: .5rem;
-    filter: drop-shadow(0 0 0.75rem rgba(27, 31, 35, 0.15));
+    // filter: drop-shadow(0 0 0.75rem $white);
+    filter: drop-shadow(0 0 0.75rem rgba(12, 27, 41, 0.15));
     padding: 5rem 2.5rem 2.5rem;
     transition: all 0.3s ease-out;
     &.active {
