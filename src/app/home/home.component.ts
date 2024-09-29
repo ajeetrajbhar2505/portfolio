@@ -15,6 +15,11 @@ export class HomeComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.scrollValue = window.scrollY; 
+    
+  }
+
+  scrollToTop(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
   testimonials = [
     {
@@ -73,7 +78,6 @@ export class HomeComponent {
     }
   ];
   
-  selectedIndex: number = 0;
   slideConfig1 = {
     slidesToShow: 5,
     slidesToScroll: 1,
