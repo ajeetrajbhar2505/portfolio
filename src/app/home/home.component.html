@@ -112,8 +112,6 @@
         </div>
     </section>
 
-    
-
     <section class="opportunities">
         <div class="opportunities__content w-105">
             <div class="opportunities__head">
@@ -224,7 +222,7 @@
         </div>
     </section>
 
-        <section class="opportunities">
+    <section class="opportunities">
         <div class="opportunities__content w-105">
             <div class="opportunities__head">
                 <h2 class="opportunities__title">Our Software Development Process</h2>
@@ -286,7 +284,7 @@
     </section>
 
     <section class="opportunities">
-        <div class="opportunities__content w-105">
+        <div class="opportunities__content w-105" style="margin-bottom: unset;">
             <div class="opportunities__head">
                 <h2 class="opportunities__title">Technologies We Use for
                     Custom Software Development</h2>
@@ -298,21 +296,18 @@
 
             <section class="farm-invest w-105 opportunities">
                 <div class="opportunities__body">
-                    <img src="https://www.capitalnumbers.com/images/technologies-icons/angular-icon.svg" alt="Define"
-                        style="width: 70px;">
-                    <img src="https://www.capitalnumbers.com/images/technologies-icons/javascript-icon.svg" alt="Define"
-                        style="width: 70px;">
-                    <img src="https://www.capitalnumbers.com/images/technologies-icons/typescript-icon.svg" alt="Define"
-                        style="width: 70px;">
-                    <img src="https://www.capitalnumbers.com/images/technologies-icons/nodejs-icon.svg" alt="Define"
-                        style="width: 70px;">
-                    <img src="https://www.capitalnumbers.com/images/technologies-icons/azure-icon.svg" alt="Define"
-                        style="width: 70px;">
+                    <ngx-slick-carousel class="carousel" [config]="slideConfig1">
+                        <div ngxSlickItem *ngFor="let data of technologies; let i = index" class="slide">
+                         <img [src]="data.img" [alt]="data.imageName" loading="lazy">
+                        </div>
+                      </ngx-slick-carousel>
                 </div>
             </section>
 
         </div>
     </section>
+
+    
     <section class="opportunities">
         <div class="opportunities__content w-105">
             <div class="opportunities__head">
@@ -323,10 +318,12 @@
             <div class="opportunities__body">
                 <div class="opportunity">
                     <div class="arrow-ribbon">2024-2025</div>
-                    <img loading="lazy" src="/sbimf.png" alt="SBIMF" style="width: 60px;">
+                    <img loading="lazy" src="/sbimf.png" alt="SBIMF" style="width: 60px;height: 60px;">
 
                     <h4 class="opportunity__title">Software Developer</h4>
-                    <p class="opportunity__description">Worked collaboratively with a team to design and implement software solutions. Focused on performance and contributing to project goals while continuously improving skills in software development.</p>
+                    <p class="opportunity__description">Worked collaboratively with a team to design and implement
+                        software solutions. Focused on performance and contributing to project goals while continuously
+                        improving skills in software development.</p>
                     <p><br></p>
                 </div>
 
@@ -334,7 +331,9 @@
                     <div class="arrow-ribbon">2023-2024</div>
                     <img loading="lazy" src="/appic.svg" alt="Appic" style="width: 80px;">
                     <h4 class="opportunity__title">Angular Developer</h4>
-                    <p class="opportunity__description">Successfully completed various freelance projects, collaborating with clients to deliver customized solutions. Managed project timelines and maintained clear communication, resulting in high client satisfaction and repeat business.</p>
+                    <p class="opportunity__description">Successfully completed various freelance projects, collaborating
+                        with clients to deliver customized solutions. Managed project timelines and maintained clear
+                        communication, resulting in high client satisfaction and repeat business.</p>
                     <p><br></p>
                 </div>
 
@@ -342,7 +341,9 @@
                     <div class="arrow-ribbon">2020-2023</div>
                     <img loading="lazy" src="/offee.png" alt="Offee" style="width: 80px;">
                     <h4 class="opportunity__title">Full Stack Developer</h4>
-                    <p class="opportunity__description">Developed a strong foundation in frontend and backend technologies, mastering Node.js and SQL databases. Contributed to multiple projects that improved user experience and streamlined backend processes.</p>
+                    <p class="opportunity__description">Developed a strong foundation in frontend and backend
+                        technologies, mastering Node.js and SQL databases. Contributed to multiple projects that
+                        improved user experience and streamlined backend processes.</p>
                     <p><br></p>
                 </div>
             </div>
@@ -386,16 +387,6 @@
     </section>
 
 
-    <section class="farm-invest w-105">
-        <h2 class="farm-invest__title">Let's Discuss Your Project</h2>
-        <p>Our solutions experts schedule a secure meeting within 24 hours.</p>
-        <p>They recommend tailored skills and hiring models.</p>
-        <p>You make informed decisions based on our expert guidance.</p>
-        <a href="#" class="btn btn__farm--invest" *ngIf="true">Schedule A Discovery Call&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
-    </section>
-
-
-
 
     <section class="testimonials">
         <div class="testimonials__content">
@@ -406,37 +397,40 @@
             </div>
             <div class="testimonials__body">
                 <div class="testimonials__list">
-                    <div class="testimonial" *ngFor="let testimonial of testimonials;let i = index"
-                        (click)="setSelectedIndex(i)">
-                        <div class="testimonial__profile">
+                    
+              
+                    <ngx-slick-carousel class="carousel" [config]="slideConfig2">
+                        <div ngxSlickItem *ngFor="let testimonial of testimonials; let i = index" class="slide">
+                          <div class="testimonial__profile">
                             <div class="testimonial__img">
-                                <img [src]="testimonial.img" alt="Testimonial">
+                              <img [src]="testimonial.img" alt="Testimonial {{ i + 1 }}">
                             </div>
                             <div class="testimonial__info">
-                                <h4 class="testimonial__name">{{ testimonial.name }}</h4>
-                                <h4 class="testimonial__title">{{ testimonial.title }}</h4>
+                              <h4 class="testimonial__name">{{ testimonial.name }}</h4>
+                              <h4 class="testimonial__title">{{ testimonial.title }}</h4>
                             </div>
-                        </div>
-                        <p class="testimonial__description">
+                          </div>
+                          <p class="testimonial__description">
                             {{ testimonial.description }}
-                        </p>
-                    </div>
+                          </p>
+                        </div>
+                      </ngx-slick-carousel>
+                      
                 </div>
 
-            </div>
-            <div class="testimonials__footer w-105">
-                <div class="testimonials__directions">
-                    <button class="btn__testimonials btn__testimonials__prev disable"
-                        (click)="adjustFlexShrink('increase')">
-                        <i class="fa fa-chevron-left"></i>
-                    </button>
-                    <button class="btn__testimonials btn__testimonials__next" (click)="adjustFlexShrink('decrease')">
-                        <i class="fa fa-chevron-right"></i>
-                    </button>
-
-                </div>
             </div>
         </div>
+    </section>
+
+
+
+    <section class="farm-invest w-105">
+        <h2 class="farm-invest__title">Let's Discuss Your Project</h2>
+        <p>Our solutions experts schedule a secure meeting within 24 hours.</p>
+        <p>They recommend tailored skills and hiring models.</p>
+        <p>You make informed decisions based on our expert guidance.</p>
+        <a href="#" class="btn btn__farm--invest" *ngIf="true">Schedule A Discovery Call&nbsp;&nbsp;<i
+                class="fas fa-arrow-right"></i></a>
     </section>
 
 
@@ -445,7 +439,7 @@
 
 
 
-    
+
 
     <footer class="footer">
         <div class="footer__body w-105">
@@ -500,9 +494,9 @@
                 </ul>
             </nav>
             <div class="footer__contact">
-                <h5 class="footer__contact__title">Blog Zou</h5>
+                <h5 class="footer__contact__title">DevInspire Solutions</h5>
                 <span>Write email to us</span>
-                <a href="mailto:info@zoufarm.com" class="email">{{'info@zoufarm.com'}}</a>
+                <a href="mailto:info@DevInspireSolutions.com" class="email">{{'info@DevInspireSolutions.com'}}</a>
                 <a href="#" class="btn btn__signin">
                     <i class="far fa-user"></i> Email Us
                 </a>
@@ -515,7 +509,7 @@
                         alt="Logo">
                 </div>
                 <p class="footer_copyright">
-                    © Copyright 25th Sep 2024. Zou Capital Pvt Ltd (Mumbai).
+                    © Copyright 25th Sep 2024. DevInspire Solutions Pvt Ltd (Mumbai).
                 </p>
             </div>
         </div>
