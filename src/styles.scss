@@ -1618,3 +1618,52 @@ header {
         padding-left: 8px;
     }
 }
+
+$color_list: $fern, rgb(0, 0, 0, .1);
+$side: 13em;
+$factor: .6;
+$radius: (1 - $factor) * 25%;
+$stop_1: calc((#{$radius} - 2px));
+$stop_2: calc((#{$radius} - 1px));
+
+/* Centering the loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* To ensure it stays on top of other elements */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: adds a background layer */
+}
+
+.ring {
+  --f: 1;
+  width: $side;
+  height: $side;
+  transform: scale(var(--f));
+  opacity: var(--f);
+  background: 
+    radial-gradient(circle at 2*$radius 2*$radius, nth($color_list, 2) $stop_1, transparent $stop_2),
+    radial-gradient(circle at 50% $radius, nth($color_list, 1) $stop_1, transparent $stop_2),
+    radial-gradient(circle at 100% - 2*$radius 2*$radius, nth($color_list, 2) $stop_1, transparent $stop_2),
+    radial-gradient(circle at 100% - $radius, nth($color_list, 1) $stop_1, transparent $stop_2),
+    radial-gradient(circle at 100% - 2*$radius 100% - 2*$radius, nth($color_list, 2) $stop_1, transparent $stop_2),
+    radial-gradient(circle at 50% 100% - $radius, nth($color_list, 1) $stop_1, transparent $stop_2),
+    radial-gradient(circle at 0% + 2*$radius 100% - 2*$radius, nth($color_list, 2) $stop_1, transparent $stop_2),
+    radial-gradient(circle at $radius, nth($color_list, 1) $stop_1, transparent $stop_2);
+  animation: rotation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+
+  & > & {
+    --f: #{$factor};
+  }
+}
+
+@keyframes rotation {
+  to {
+    transform: scale(var(--f)) rotate(1turn);
+  }
+}
