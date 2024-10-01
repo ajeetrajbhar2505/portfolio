@@ -3,7 +3,7 @@
         <nav class="header__nav w-120">
             <div class="header__logo">
                 <img src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/logo.svg"
-                    alt="Logo">
+                    alt="Logo" loading="lazy" draggable="false">
             </div>
             <div class="header__nav__content">
                 <div class="nav-close-icon"></div>
@@ -194,26 +194,26 @@
             </div>
             <div class="opportunities__body">
                 <div class="opportunity">
-                    <img src="/DevOps.png" alt="DevOps" style="width: 60px;">
+                    <img src="/DevOps.png" alt="DevOps" style="width: 60px;" loading="lazy" draggable="false">
                     <h4 class="opportunity__title">DevOps</h4>
                     <p class="opportunity__description">We combine development and operations through DevOps, making our
                         work faster and more collaborative with quick updates and smoother processes.</p>
                 </div>
 
                 <div class="opportunity">
-                    <img src="/Scrum.png" alt="Scrum" style="width: 60px;">
+                    <img src="/Scrum.png" alt="Scrum" style="width: 60px;" loading="lazy" draggable="false">
                     <h4 class="opportunity__title">Scrum</h4>
                     <p class="opportunity__description">Using Scrum, we break big tasks into smaller ones, work on them
                         in short cycles, and keep improving as we go, keeping everyone in sync.</p>
                 </div>
                 <div class="opportunity">
-                    <img src="/Agile.png" alt="Agile" style="width: 60px;">
+                    <img src="/Agile.png" alt="Agile" style="width: 60px;" loading="lazy" draggable="false">
                     <h4 class="opportunity__title">Agile</h4>
                     <p class="opportunity__description">With Agile, we stay flexible, work closely with our clients, and
                         deliver bits of the project regularly, adjusting easily to any changes.</p>
                 </div>
                 <div class="opportunity">
-                    <img src="/Waterfall.png" alt="Waterfall" style="width: 60px;">
+                    <img src="/Waterfall.png" alt="Waterfall" style="width: 60px;" loading="lazy" draggable="false">
                     <h4 class="opportunity__title">Waterfall</h4>
                     <p class="opportunity__description">We use Waterfall when we have everything planned out from the
                         start. It's a step-by-step approach that keeps things clear and organized.</p>
@@ -233,7 +233,7 @@
 
             <div class="timeline">
                 <div class="customcontainer left">
-                    <img src="/public_define.svg" alt="Define" class="icon" style="width: 60px;">
+                    <img src="/public_define.svg" alt="Define" class="icon" style="width: 60px;" loading="lazy" draggable="false">
                     <div class="content">
                         <h2>Define</h2>
                         <p>Identify the objectives and scope of the software and create a detailed roadmap.</p>
@@ -241,7 +241,7 @@
                 </div>
 
                 <div class="customcontainer right">
-                    <img src="/public_design.svg" alt="Design" class="icon" style="width: 60px;">
+                    <img src="/public_design.svg" alt="Design" class="icon" style="width: 60px;" loading="lazy" draggable="false">
                     <div class="content">
                         <h2>Design</h2>
                         <p>Develop user-centric designs and architecture for seamless use.</p>
@@ -249,7 +249,7 @@
                 </div>
 
                 <div class="customcontainer left">
-                    <img src="/public_develop.svg" alt="Develop" class="icon" style="width: 60px;">
+                    <img src="/public_develop.svg" alt="Develop" class="icon" style="width: 60px;" loading="lazy" draggable="false">
                     <div class="content">
                         <h2>Develop</h2>
                         <p>Code the application using best practices and the latest technologies.</p>
@@ -257,7 +257,7 @@
                 </div>
 
                 <div class="customcontainer right">
-                    <img src="/public_test.svg" alt="Test" class="icon" style="width: 60px;">
+                    <img src="/public_test.svg" alt="Test" class="icon" style="width: 60px;" loading="lazy" draggable="false">
                     <div class="content">
                         <h2>Test</h2>
                         <p>Conduct comprehensive testing to identify and fix any issues.</p>
@@ -265,7 +265,7 @@
                 </div>
 
                 <div class="customcontainer left">
-                    <img src="/public_security.svg" alt="Deploy" class="icon" style="width: 60px;">
+                    <img src="/public_security.svg" alt="Deploy" class="icon" style="width: 60px;" loading="lazy" draggable="false">
                     <div class="content">
                         <h2>Deploy</h2>
                         <p>Implement the solution in the target environment with precision.</p>
@@ -273,7 +273,7 @@
                 </div>
 
                 <div class="customcontainer right">
-                    <img src="/public_documentation.svg" alt="Maintain" class="icon" style="width: 60px;">
+                    <img src="/public_documentation.svg" alt="Maintain" class="icon" style="width: 60px;" loading="lazy" draggable="false">
                     <div class="content">
                         <h2>Maintain</h2>
                         <p>Offer continuous support, updates, and enhancements post-launch.</p>
@@ -298,7 +298,7 @@
                 <div class="opportunities__body">
                     <ngx-slick-carousel class="carousel" [config]="slideConfig1">
                         <div ngxSlickItem *ngFor="let data of technologies; let i = index" class="slide">
-                         <img [src]="data.img" [alt]="data.imageName" loading="lazy">
+                         <img [src]="data.img" [alt]="data.imageName" loading="lazy" draggable="false">
                         </div>
                       </ngx-slick-carousel>
                 </div>
@@ -316,8 +316,8 @@
             </div>
             <div class="opportunities__body">
                 <div class="opportunity">
-                    <div class="arrow-ribbon">2024-2025</div>
-                    <img loading="lazy" src="/sbimf.png" alt="SBIMF" style="width: 60px;height: 60px;">
+                    <div class="arrow-ribbon" *ngIf="false">2024-2025</div>
+                    <img loading="lazy" draggable="false" src="/sbimf.png" alt="SBIMF" style="width: 60px;height: 60px;">
 
                     <h4 class="opportunity__title">Software Developer</h4>
                     <p class="opportunity__description">Worked collaboratively with a team to design and implement
@@ -327,8 +327,8 @@
                 </div>
 
                 <div class="opportunity">
-                    <div class="arrow-ribbon">2023-2024</div>
-                    <img loading="lazy" src="/appic.svg" alt="Appic" style="width: 80px;">
+                    <div class="arrow-ribbon" *ngIf="false">2023-2024</div>
+                    <img loading="lazy" draggable="false" src="/appic.svg" alt="Appic" style="width: 80px;">
                     <h4 class="opportunity__title">Angular Developer</h4>
                     <p class="opportunity__description">Successfully completed various freelance projects, collaborating
                         with clients to deliver customized solutions. Managed project timelines and maintained clear
@@ -337,8 +337,8 @@
                 </div>
 
                 <div class="opportunity">
-                    <div class="arrow-ribbon">2020-2023</div>
-                    <img loading="lazy" src="/offee.png" alt="Offee" style="width: 80px;">
+                    <div class="arrow-ribbon" *ngIf="false">2020-2023</div>
+                    <img loading="lazy" draggable="false" src="/offee.png" alt="Offee" style="width: 80px;">
                     <h4 class="opportunity__title">Full Stack Developer</h4>
                     <p class="opportunity__description">Developed a strong foundation in frontend and backend
                         technologies, mastering Node.js and SQL databases. Contributed to multiple projects that
@@ -390,7 +390,7 @@
     <section class="testimonials">
         <div class="testimonials__content">
             <div class="testimonials__head w-105">
-                <img src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/quote.svg"
+                <img loading="lazy" draggable="false" src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/quote.svg"
                     alt="Quote" class="testimonials__quote">
                 <h2 class="testimonials__title">What fellow developers are saying about my work</h2>
             </div>
@@ -402,7 +402,7 @@
                         <div ngxSlickItem *ngFor="let testimonial of testimonials; let i = index" class="slide">
                           <div class="testimonial__profile">
                             <div class="testimonial__img">
-                              <img [src]="testimonial.img" alt="Testimonial {{ i + 1 }}">
+                              <img [src]="testimonial.img" alt="Testimonial {{ i + 1 }}" loading="lazy" draggable="false">
                             </div>
                             <div class="testimonial__info">
                               <h4 class="testimonial__name">{{ testimonial.name }}</h4>
@@ -505,7 +505,7 @@
             <div class="footer__bottom__content w-105">
                 <div class="footer__logo">
                     <img src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/logo.svg"
-                        alt="Logo">
+                        alt="Logo" loading="lazy" draggable="false">
                 </div>
                 <p class="footer_copyright">
                     © Copyright 25th Sep 2024. DevInspire Solutions Pvt Ltd (Mumbai).
