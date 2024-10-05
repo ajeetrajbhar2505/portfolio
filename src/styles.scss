@@ -245,6 +245,12 @@ header {
 
 .hero__content {
     display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    img{
+        margin-top: 10%;
+        height: 100%;
+    }
 }
 
 .hero__text {
@@ -276,7 +282,7 @@ header {
     right: 33%;
     z-index: -1;
     img {
-        max-height: 100vh;
+        // max-height: 100vh;
         width: initial;
     }
 }
@@ -859,6 +865,24 @@ header {
 
 
 /*End Footer*/
+@media screen and (max-width:1140px) {
+    .hero__content {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        margin: -50px;
+        img{
+            margin-top: unset !important;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:420px) {
+    .hero__content {
+        margin: unset !important;
+    }
+}
 
 @media screen and (max-width:950px) {
     /*Header */
@@ -903,7 +927,9 @@ header {
     /*End Header */
     /*Hero */
     .hero__content {
+        display: grid;
         justify-content: center;
+        margin: unset !important;
         text-align: center;
     }
     .hero__img {

@@ -2,8 +2,7 @@
     <header>
         <nav class="header__nav w-120">
             <div class="header__logo">
-                <img src="/fire.svg"
-                    alt="Logo" loading="lazy" draggable="false">
+
             </div>
             <div class="header__nav__content">
                 <div class="nav-close-icon"></div>
@@ -11,21 +10,27 @@
                     <li class="menu__item">
                         <a href="#" class="menu__link active">Home</a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Product</a>
+                    <li class="menu__item" (click)="scrollTo(800)">
+                        <a class="menu__link">Product</a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Team</a>
+                    <li class="menu__item" (click)="scrollTo(1636)">
+                        <a class="menu__link">Services</a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Blog</a>
+                    <li class="menu__item" (click)="scrollTo(2800)">
+                        <a class="menu__link">Methodologies</a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Contact</a>
+                    <li class="menu__item" (click)="scrollTo(4000)">
+                        <a class="menu__link">Development Process</a>
+                    </li>
+                    <li class="menu__item" (click)="scrollTo(5333)">
+                        <a class="menu__link">Technologies</a>
+                    </li>
+                    <li class="menu__item" (click)="scrollTo(7902)">
+                        <a class="menu__link">Contact</a>
                     </li>
                 </ul>
                 <div class="header__signup" *ngIf="false">
-                    <a href="#" class="btn btn__signup">
+                    <a class="btn btn__signup">
                         <i class="fas fa-user-plus"></i> Sign Up
                     </a>
                 </div>
@@ -41,7 +46,7 @@
         </nav>
     </header>
 
-    <section class="hero w-120">
+    <section class="hero">
         <div class="hero__content">
             <div class="hero__text">
                 <h1 class="hero__title">Innovative Solutions in Software Development</h1>
@@ -51,30 +56,10 @@
                 </p>
                 <a href="#" class="btn btn__hero">Hire Us</a>
             </div>
-            <div class="hero__img">
-                <div id="cartoon" role="img" aria-labelledby="description">
-                    <div id="description">Cartoon of a young man with curly hair</div>
-                    <div class="hair-neck"></div>
-                    <div class="body"></div>
-                    <div class="ear"></div>
-                    <div class="ear"></div>
-                    <div class="neck"></div>
-                    <div class="hair-back"></div>
-                    <div class="face">
-                        <div class="cheeks"></div>
-                        <div class="eye">
-                            <div class="pupil"></div>
-                        </div>
-                        <div class="eye">
-                            <div class="pupil"></div>
-                        </div>
-                        <div class="mouth"></div>
-                        <div class="freckles"></div>
-                        <div class="nose"></div>
-                    </div>
-                    <div class="hair-top"></div>
-                </div>
-            </div>
+         
+        <div class="hero__content">
+           <img src="/coding.png" alt="" srcset="">
+        </div>
         </div>
     </section>
 
@@ -83,7 +68,7 @@
     <section class="opportunities">
         <div class="opportunities__content w-105">
             <div class="opportunities__head">
-                <h2 class="opportunities__title">Journey Begins</h2>
+                <h2 class="opportunities__title">Journey Begins With Products</h2>
                 <p class="opportunities__description">As a full-stack developer, I bring innovative solutions with a
                     strong focus on scalability and performance, leveraging cutting-edge technologies.</p>
             </div>
@@ -233,7 +218,8 @@
 
             <div class="timeline">
                 <div class="customcontainer left">
-                    <img src="/public_define.svg" alt="Define" class="icon" style="width: 60px;" loading="lazy" draggable="false">
+                    <img src="/public_define.svg" alt="Define" class="icon" style="width: 60px;" loading="lazy"
+                        draggable="false">
                     <div class="content">
                         <h2>Define</h2>
                         <p>Identify the objectives and scope of the software and create a detailed roadmap.</p>
@@ -241,7 +227,8 @@
                 </div>
 
                 <div class="customcontainer right">
-                    <img src="/public_design.svg" alt="Design" class="icon" style="width: 60px;" loading="lazy" draggable="false">
+                    <img src="/public_design.svg" alt="Design" class="icon" style="width: 60px;" loading="lazy"
+                        draggable="false">
                     <div class="content">
                         <h2>Design</h2>
                         <p>Develop user-centric designs and architecture for seamless use.</p>
@@ -249,7 +236,8 @@
                 </div>
 
                 <div class="customcontainer left">
-                    <img src="/public_develop.svg" alt="Develop" class="icon" style="width: 60px;" loading="lazy" draggable="false">
+                    <img src="/public_develop.svg" alt="Develop" class="icon" style="width: 60px;" loading="lazy"
+                        draggable="false">
                     <div class="content">
                         <h2>Develop</h2>
                         <p>Code the application using best practices and the latest technologies.</p>
@@ -257,7 +245,8 @@
                 </div>
 
                 <div class="customcontainer right">
-                    <img src="/public_test.svg" alt="Test" class="icon" style="width: 60px;" loading="lazy" draggable="false">
+                    <img src="/public_test.svg" alt="Test" class="icon" style="width: 60px;" loading="lazy"
+                        draggable="false">
                     <div class="content">
                         <h2>Test</h2>
                         <p>Conduct comprehensive testing to identify and fix any issues.</p>
@@ -265,7 +254,8 @@
                 </div>
 
                 <div class="customcontainer left">
-                    <img src="/public_security.svg" alt="Deploy" class="icon" style="width: 60px;" loading="lazy" draggable="false">
+                    <img src="/public_security.svg" alt="Deploy" class="icon" style="width: 60px;" loading="lazy"
+                        draggable="false">
                     <div class="content">
                         <h2>Deploy</h2>
                         <p>Implement the solution in the target environment with precision.</p>
@@ -273,7 +263,8 @@
                 </div>
 
                 <div class="customcontainer right">
-                    <img src="/public_documentation.svg" alt="Maintain" class="icon" style="width: 60px;" loading="lazy" draggable="false">
+                    <img src="/public_documentation.svg" alt="Maintain" class="icon" style="width: 60px;" loading="lazy"
+                        draggable="false">
                     <div class="content">
                         <h2>Maintain</h2>
                         <p>Offer continuous support, updates, and enhancements post-launch.</p>
@@ -298,26 +289,33 @@
                 <div class="opportunities__body">
                     <ngx-slick-carousel class="carousel" [config]="slideConfig1">
                         <div ngxSlickItem *ngFor="let data of technologies; let i = index" class="slide">
-                         <img [src]="data.img" [alt]="data.imageName" loading="lazy" draggable="false">
+                            <img [src]="data.img" [alt]="data.imageName" loading="lazy" draggable="false">
                         </div>
-                      </ngx-slick-carousel>
+                    </ngx-slick-carousel>
                 </div>
             </section>
 
         </div>
     </section>
 
-    
+
     <section class="opportunities">
         <div class="opportunities__content w-105">
             <div class="opportunities__head">
                 <h2 class="opportunities__title">Experience</h2>
-                <p class="opportunities__description">I am a dedicated software developer with experience in collaborating with teams to design and implement effective software solutions. My focus on performance and continuous improvement has enabled me to successfully complete various freelance projects, delivering customized solutions that prioritize client satisfaction and communication. With a strong foundation in frontend and backend technologies, particularly Node.js and SQL databases, I have contributed to projects that enhance user experiences and optimize backend processes.</p>
+                <p class="opportunities__description">I am a dedicated software developer with experience in
+                    collaborating with teams to design and implement effective software solutions. My focus on
+                    performance and continuous improvement has enabled me to successfully complete various freelance
+                    projects, delivering customized solutions that prioritize client satisfaction and communication.
+                    With a strong foundation in frontend and backend technologies, particularly Node.js and SQL
+                    databases, I have contributed to projects that enhance user experiences and optimize backend
+                    processes.</p>
             </div>
             <div class="opportunities__body">
                 <div class="opportunity">
                     <div class="arrow-ribbon" *ngIf="false">2024-2025</div>
-                    <img loading="lazy" draggable="false" src="/sbimf.png" alt="SBIMF" style="width: 60px;height: 60px;">
+                    <img loading="lazy" draggable="false" src="/sbimf.png" alt="SBIMF"
+                        style="width: 60px;height: 60px;">
 
                     <h4 class="opportunity__title">Software Developer</h4>
                     <p class="opportunity__description">Worked collaboratively with a team to design and implement
@@ -390,31 +388,31 @@
     <section class="testimonials">
         <div class="testimonials__content">
             <div class="testimonials__head w-105">
-                <img loading="lazy" draggable="false" src="https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/quote.svg"
-                    alt="Quote" class="testimonials__quote">
+                <img loading="lazy" draggable="false" src="/quote.svg" alt="Quote" class="testimonials__quote">
                 <h2 class="testimonials__title">What fellow developers are saying about my work</h2>
             </div>
             <div class="testimonials__body">
                 <div class="testimonials__list">
-                    
-              
+
+
                     <ngx-slick-carousel class="carousel" [config]="slideConfig2">
                         <div ngxSlickItem *ngFor="let testimonial of testimonials; let i = index" class="slide">
-                          <div class="testimonial__profile">
-                            <div class="testimonial__img">
-                              <img [src]="testimonial.img" alt="Testimonial {{ i + 1 }}" loading="lazy" draggable="false">
+                            <div class="testimonial__profile">
+                                <div class="testimonial__img">
+                                    <img [src]="testimonial.img" alt="Testimonial {{ i + 1 }}" loading="lazy"
+                                        draggable="false">
+                                </div>
+                                <div class="testimonial__info">
+                                    <h4 class="testimonial__name">{{ testimonial.name }}</h4>
+                                    <h4 class="testimonial__title">{{ testimonial.title }}</h4>
+                                </div>
                             </div>
-                            <div class="testimonial__info">
-                              <h4 class="testimonial__name">{{ testimonial.name }}</h4>
-                              <h4 class="testimonial__title">{{ testimonial.title }}</h4>
-                            </div>
-                          </div>
-                          <p class="testimonial__description">
-                            {{ testimonial.description }}
-                          </p>
+                            <p class="testimonial__description">
+                                {{ testimonial.description }}
+                            </p>
                         </div>
-                      </ngx-slick-carousel>
-                      
+                    </ngx-slick-carousel>
+
                 </div>
 
             </div>
@@ -428,13 +426,9 @@
         <p>Our solutions experts schedule a secure meeting within 24 hours.</p>
         <p>They recommend tailored skills and hiring models.</p>
         <p>You make informed decisions based on our expert guidance.</p>
-        <a href="#" class="btn btn__farm--invest" *ngIf="true">Schedule A Discovery Call&nbsp;&nbsp;<i
+        <a href="tel:7715868886" class="btn btn__farm--invest" *ngIf="true">Schedule A Discovery Call&nbsp;&nbsp;<i
                 class="fas fa-arrow-right"></i></a>
     </section>
-
-
-
-
 
 
 
@@ -447,48 +441,33 @@
                     <li class="footer_nav__item">
                         <h4 class="footer_nav__menu__title">COMPANY</h4>
                     </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">About Us</a>
+                    <li class="footer_nav__item" (click)="scrollTo(0)">
+                        <a class="footer_nav__link">Home</a>
                     </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">Team</a>
+                    <li class="footer_nav__item" (click)="scrollTo(7902)">
+                        <a class="footer_nav__link">Contact</a>
                     </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">Careers</a>
-                    </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">Contact</a>
-                    </li>
+
+
                 </ul>
                 <ul class="footer_nav__menu">
                     <li class="footer_nav__item">
                         <h4 class="footer_nav__menu__title">INVEST</h4>
                     </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">Features</a>
+                    <li class="footer_nav__item" (click)="scrollTo(800)">
+                        <a class="footer_nav__link">Product</a>
                     </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">How it works</a>
+                    <li class="footer_nav__item" (click)="scrollTo(1636)">
+                        <a class="footer_nav__link">Services</a>
                     </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">Pricing</a>
+                    <li class="footer_nav__item" (click)="scrollTo(2800)">
+                        <a class="footer_nav__link">Methodologies</a>
                     </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">Login</a>
+                    <li class="footer_nav__item" (click)="scrollTo(4000)">
+                        <a class="footer_nav__link">Development Process</a>
                     </li>
-                </ul>
-                <ul class="footer_nav__menu">
-                    <li class="footer_nav__item">
-                        <h4 class="footer_nav__menu__title">LEGAL</h4>
-                    </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">Privacy</a>
-                    </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">Terms</a>
-                    </li>
-                    <li class="footer_nav__item">
-                        <a href="#" class="footer_nav__link">Security</a>
+                    <li class="footer_nav__item" (click)="scrollTo(5333)">
+                        <a class="footer_nav__link">Technologies</a>
                     </li>
                 </ul>
             </nav>
@@ -496,7 +475,7 @@
                 <h5 class="footer__contact__title">DevInspire Solutions</h5>
                 <span>Write email to us</span>
                 <a href="mailto:info@DevInspireSolutions.com" class="email">{{'info@DevInspireSolutions.com'}}</a>
-                <a href="#" class="btn btn__signin">
+                <a href="mailto:info@DevInspireSolutions.com" class="btn btn__signin">
                     <i class="far fa-user"></i> Email Us
                 </a>
             </div>
@@ -510,5 +489,6 @@
         </div>
     </footer>
 
-    <a (click)="scrollToTop()" class="btn btn__hero scroll-top" *ngIf="scrollValue >=800">Scroll Top <i class="fas fa-angle-double-up"></i></a>
+    <a (click)="scrollToTop()" class="btn btn__hero scroll-top" *ngIf="scrollValue >=800">Scroll Top <i
+            class="fas fa-angle-double-up"></i></a>
 </div>

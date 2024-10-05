@@ -15,12 +15,33 @@ export class HomeComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.scrollValue = window.scrollY; 
-    
+  }
+
+  scrollTo(scrollValue:number){
+    window.scrollTo({ top: scrollValue, behavior: "smooth" });
   }
 
   scrollToTop(){
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
+  content:any[] = [
+    {
+      img: '/angular.png',
+      title: 'angular',
+    },
+    {
+      img: '/api.png',
+      title: 'api',
+    },
+    {
+      img: '/coding.png',
+      title: 'coding',
+    },
+    {
+      img: '/css.png',
+      title: 'css',
+    },
+  ]
   testimonials = [
     {
       img: 'https://raw.githubusercontent.com/mustafadalga/farm-landing-page/master/assets/img/testimonials/1.png',
@@ -124,4 +145,29 @@ export class HomeComponent {
     ],
   };
   
+
+
+slideConfig3 = {
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots: true,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
+
 }
