@@ -57,8 +57,30 @@
                 <a href="#" class="btn btn__hero">Hire Us</a>
             </div>
          
-        <div class="hero__content">
-           <img src="/coding.png" alt="" srcset="">
+        <div class="hero__img">
+            <div id="cartoon" role="img" aria-labelledby="description">
+                <div id="description">Cartoon of a young man with curly hair</div>
+                <div class="hair-neck"></div>
+                <div class="body"></div>
+                <div class="ear"></div>
+                <div class="ear"></div>
+                <div class="neck"></div>
+                <div class="hair-back"></div>
+                <div class="face">
+                    <div class="cheeks"></div>
+                    <div class="eye">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="eye">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="mouth"></div>
+                    <div class="freckles"></div>
+                    <div class="nose"></div>
+                </div>
+                <div class="hair-top"></div>
+            </div>
+           <!-- <img src="/coding.png" alt="" srcset=""> -->
         </div>
         </div>
     </section>
@@ -73,27 +95,10 @@
                     strong focus on scalability and performance, leveraging cutting-edge technologies.</p>
             </div>
             <div class="opportunities__body">
-                <div class="opportunity">
-                    <i class="fas fa-laptop-code"></i>
-                    <h4 class="opportunity__title">Frontend Development</h4>
-                    <p class="opportunity__description">Creating visually appealing, responsive, and user-friendly
-                        interfaces using Angular, React, HTML, CSS, and JavaScript.</p>
+                <div class="opportunity no-focus" *ngFor="let data of content;">
+                    <img [src]="data.img" alt="" srcset="" height="200px">
+                  </div>
                 </div>
-
-                <div class="opportunity">
-                    <i class="fa fa-database"></i>
-                    <h4 class="opportunity__title">Backend Development</h4>
-                    <p class="opportunity__description">Building robust, scalable server-side applications with Node.js,
-                        Express, and MongoDB, integrating RESTful APIs to power efficient systems.</p>
-                </div>
-
-                <div class="opportunity">
-                    <i class="fas fa-cloud"></i>
-                    <h4 class="opportunity__title">Cloud & DevOps</h4>
-                    <p class="opportunity__description">Experience with cloud platforms like AWS and DevOps tools such
-                        as Docker and Kubernetes to streamline deployment and scalability.</p>
-                </div>
-            </div>
         </div>
     </section>
 

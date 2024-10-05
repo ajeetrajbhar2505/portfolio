@@ -278,7 +278,7 @@ header {
 
 .hero__img {
     position: absolute;
-    top: 86%;
+    top: 95%;
     right: 33%;
     z-index: -1;
     img {
@@ -312,9 +312,7 @@ header {
     margin: auto;
     display: flex;
     flex-direction: column;
-    padding-bottom: 5rem;
-    // border-bottom: 2px solid $alabaster;
-    margin-bottom: 4rem;
+    margin-top: 10%;
 }
 
 .opportunities__head {
@@ -372,6 +370,10 @@ header {
             color: $white;
         }
     }
+}
+.no-focus{
+    transform: unset !important;
+    background-color: transparent !important;
 }
 
 .opportunity__icon {
@@ -873,6 +875,12 @@ header {
         margin: -50px;
         img{
             margin-top: unset !important;
+            height: 100%;
+        }
+        .hero__img {
+            display: none;
+        }
+        .hero{
             height: 100%;
         }
     }
@@ -1600,7 +1608,7 @@ header {
 }
 
 
-.fa-arrow-right:before {
+.animate:before {
   display: inline-block; /* Ensure the icon behaves like a block element */
   transform: translateX(0); /* Start from left */
   animation: slideIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite; /* Call the animation */

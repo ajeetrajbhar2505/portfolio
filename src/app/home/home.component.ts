@@ -2,29 +2,33 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
+
+
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,SlickCarouselModule],
-  providers:[],
+  imports: [CommonModule, SlickCarouselModule],
+  providers: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  scrollValue:number = 0
+  scrollValue: number = 0
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.scrollValue = window.scrollY; 
+    this.scrollValue = window.scrollY;
   }
 
-  scrollTo(scrollValue:number){
+  scrollTo(scrollValue: number) {
     window.scrollTo({ top: scrollValue, behavior: "smooth" });
   }
 
-  scrollToTop(){
+  scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-  content:any[] = [
+  content: any[] = [
     {
       img: '/angular.png',
       title: 'angular',
@@ -40,6 +44,22 @@ export class HomeComponent {
     {
       img: '/css.png',
       title: 'css',
+    },
+    {
+      img: '/javascript.svg',
+      title: 'JavaScript'
+    },
+    {
+      img: '/database.png',
+      title: 'database'
+    },
+    {
+      img: '/nosql.png',
+      title: 'nosql'
+    },
+    {
+      img: '/sql.png',
+      title: 'sql'
     },
   ]
   testimonials = [
@@ -98,7 +118,7 @@ export class HomeComponent {
       imageName: 'Azure'
     }
   ];
-  
+
   slideConfig1 = {
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -144,30 +164,30 @@ export class HomeComponent {
       },
     ],
   };
-  
 
 
-slideConfig3 = {
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  dots: true,
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
+
+  slideConfig3 = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
       },
-    },
-    {
-      breakpoint: 576,
-      settings: {
-        slidesToShow: 1,
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
       },
-    },
-  ],
-};
+    ],
+  };
 
 }
