@@ -15,13 +15,39 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 })
 export class HomeComponent {
   scrollValue: number = 0
+  activeTab:string = 'Home'
+  isSticky:boolean = false
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.scrollValue = window.scrollY;
+    const scrollPosition = window.scrollY; 
+    if (scrollPosition > 100) {  // Adjust scroll position for when you want the background to change
+      this.isSticky = true;
+    } else {
+      this.isSticky = false;
+    }
+  
+  
+    // Define scroll ranges for each tab
+    if (scrollPosition >= 0 && scrollPosition < 800) {
+      this.activeTab = 'Home';
+    } else if (scrollPosition >= 800 && scrollPosition < 1636) {
+      this.activeTab = 'Product';
+    } else if (scrollPosition >= 1636 && scrollPosition < 2800) {
+      this.activeTab = 'Services';
+    } else if (scrollPosition >= 2800 && scrollPosition < 4000) {
+      this.activeTab = 'Methodologies';
+    } else if (scrollPosition >= 4000 && scrollPosition < 5333) {
+      this.activeTab = 'Process';
+    } else if (scrollPosition >= 5333 && scrollPosition < 7902) {
+      this.activeTab = 'Technologies';
+    } else if (scrollPosition >= 7902) {
+      this.activeTab = 'Contact';
+    }
   }
-
-  scrollTo(scrollValue: number) {
+  
+  scrollTo(scrollValue: number,activeTab:string) {
+    this.activeTab = activeTab
     window.scrollTo({ top: scrollValue, behavior: "smooth" });
   }
 

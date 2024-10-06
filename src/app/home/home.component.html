@@ -1,32 +1,32 @@
 <div class="container">
     <header>
-        <nav class="header__nav w-120">
+        <nav class="header__nav w-120" [class.sticky]="isSticky">
             <div class="header__logo">
 
             </div>
             <div class="header__nav__content">
                 <div class="nav-close-icon"></div>
                 <ul class="header__menu">
-                    <li class="menu__item">
-                        <a href="#" class="menu__link active">Home</a>
+                    <li class="menu__item" (click)="scrollTo(0,'Home')">
+                        <a class="menu__link {{activeTab == 'Home'?'active':''}}">Home</a>
                     </li>
-                    <li class="menu__item" (click)="scrollTo(800)">
-                        <a class="menu__link">Product</a>
+                    <li class="menu__item" (click)="scrollTo(800,'Product')">
+                        <a class="menu__link {{activeTab == 'Product'?'active':''}}">Product</a>
                     </li>
-                    <li class="menu__item" (click)="scrollTo(1636)">
-                        <a class="menu__link">Services</a>
+                    <li class="menu__item" (click)="scrollTo(1636,'Services')">
+                        <a class="menu__link {{activeTab == 'Services'?'active':''}}">Services</a>
                     </li>
-                    <li class="menu__item" (click)="scrollTo(2800)">
-                        <a class="menu__link">Methodologies</a>
+                    <li class="menu__item" (click)="scrollTo(2800,'Methodologies')">
+                        <a class="menu__link {{activeTab == 'Methodologies'?'active':''}}">Methodologies</a>
                     </li>
-                    <li class="menu__item" (click)="scrollTo(4000)">
-                        <a class="menu__link">Development Process</a>
+                    <li class="menu__item" (click)="scrollTo(4000,'Process')">
+                        <a class="menu__link {{activeTab == 'Process'?'active':''}}">Development Process</a>
                     </li>
-                    <li class="menu__item" (click)="scrollTo(5333)">
-                        <a class="menu__link">Technologies</a>
+                    <li class="menu__item" (click)="scrollTo(5333,'Technologies')">
+                        <a class="menu__link {{activeTab == 'Technologies'?'active':''}}">Technologies</a>
                     </li>
-                    <li class="menu__item" (click)="scrollTo(7902)">
-                        <a class="menu__link">Contact</a>
+                    <li class="menu__item" (click)="scrollTo(10000,'Contact')">
+                        <a class="menu__link {{activeTab == 'Contact'?'active':''}}">Contact</a>
                     </li>
                 </ul>
                 <div class="header__signup" *ngIf="false">
@@ -54,7 +54,7 @@
                     I specialize in building scalable, efficient web applications with the latest technologies like
                     Angular, Node.js, and more.
                 </p>
-                <a href="#" class="btn btn__hero">Hire Us</a>
+                <a draggable="false" class="btn btn__hero">Hire Us</a>
             </div>
          
         <div class="hero__img">
@@ -96,7 +96,7 @@
             </div>
             <div class="opportunities__body">
                 <div class="opportunity no-focus" *ngFor="let data of content;">
-                    <img [src]="data.img" alt="" srcset="" height="200px">
+                    <img [src]="data.img" draggable="false" loading="lazy" height="200px">
                   </div>
                 </div>
         </div>
@@ -431,7 +431,7 @@
         <p>Our solutions experts schedule a secure meeting within 24 hours.</p>
         <p>They recommend tailored skills and hiring models.</p>
         <p>You make informed decisions based on our expert guidance.</p>
-        <a href="tel:7715868886" class="btn btn__farm--invest" *ngIf="true">Schedule A Discovery Call&nbsp;&nbsp;<i
+        <a draggable="false" href="tel:7715868886" class="btn btn__farm--invest" *ngIf="true">Schedule A Discovery Call&nbsp;&nbsp;<i
                 class="fas fa-arrow-right"></i></a>
     </section>
 
@@ -446,11 +446,11 @@
                     <li class="footer_nav__item">
                         <h4 class="footer_nav__menu__title">COMPANY</h4>
                     </li>
-                    <li class="footer_nav__item" (click)="scrollTo(0)">
-                        <a class="footer_nav__link">Home</a>
+                    <li class="footer_nav__item" (click)="scrollTo(0,'Home')">
+                        <a class="footer_nav__link  {{activeTab == 'Home'?'active':''}}">Home</a>
                     </li>
-                    <li class="footer_nav__item" (click)="scrollTo(7902)">
-                        <a class="footer_nav__link">Contact</a>
+                    <li class="footer_nav__item" (click)="scrollTo(7902,'Contact')">
+                        <a class="footer_nav__link  {{activeTab == 'Contact'?'active':''}}">Contact</a>
                     </li>
 
 
@@ -459,28 +459,28 @@
                     <li class="footer_nav__item">
                         <h4 class="footer_nav__menu__title">INVEST</h4>
                     </li>
-                    <li class="footer_nav__item" (click)="scrollTo(800)">
-                        <a class="footer_nav__link">Product</a>
+                    <li class="footer_nav__item" (click)="scrollTo(800,'Product')">
+                        <a class="footer_nav__link  {{activeTab == 'Product'?'active':''}}">Product</a>
                     </li>
-                    <li class="footer_nav__item" (click)="scrollTo(1636)">
-                        <a class="footer_nav__link">Services</a>
+                    <li class="footer_nav__item" (click)="scrollTo(1636,'Services')">
+                        <a class="footer_nav__link  {{activeTab == 'Services'?'active':''}}">Services</a>
                     </li>
-                    <li class="footer_nav__item" (click)="scrollTo(2800)">
-                        <a class="footer_nav__link">Methodologies</a>
+                    <li class="footer_nav__item" (click)="scrollTo(2800,'Methodologies')">
+                        <a class="footer_nav__link  {{activeTab == 'Methodologies'?'active':''}}">Methodologies</a>
                     </li>
-                    <li class="footer_nav__item" (click)="scrollTo(4000)">
-                        <a class="footer_nav__link">Development Process</a>
+                    <li class="footer_nav__item" (click)="scrollTo(4000,'Process')">
+                        <a class="footer_nav__link  {{activeTab == 'Process'?'active':''}}">Development Process</a>
                     </li>
-                    <li class="footer_nav__item" (click)="scrollTo(5333)">
-                        <a class="footer_nav__link">Technologies</a>
+                    <li class="footer_nav__item" (click)="scrollTo(5333,'Technologies')">
+                        <a class="footer_nav__link  {{activeTab == 'Technologies'?'active':''}}">Technologies</a>
                     </li>
                 </ul>
             </nav>
             <div class="footer__contact">
                 <h5 class="footer__contact__title">DevInspire Solutions</h5>
                 <span>Write email to us</span>
-                <a href="mailto:info@DevInspireSolutions.com" class="email">{{'info@DevInspireSolutions.com'}}</a>
-                <a href="mailto:info@DevInspireSolutions.com" class="btn btn__signin">
+                <a draggable="false" href="mailto:info@DevInspireSolutions.com" class="email">{{'info@DevInspireSolutions.com'}}</a>
+                <a draggable="false" href="mailto:info@DevInspireSolutions.com" class="btn btn__signin">
                     <i class="far fa-user"></i> Email Us
                 </a>
             </div>
